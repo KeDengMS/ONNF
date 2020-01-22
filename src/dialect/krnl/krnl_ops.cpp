@@ -340,6 +340,7 @@ ParseResult parseKrnlIterateOp(OpAsmParser &parser, OperationState &result) {
 static LogicalResult verify(KrnlIterateOp op) {
   // TODO: Verify number of induction variable bounds matches the number of
   // input loops.
+  return success();
 }
 
 //===----------------------------------------------------------------------===//

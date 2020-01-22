@@ -132,7 +132,8 @@ set(MLIRLibsOnce
         ${MLIRTargetLLVMIRModuleTranslation}
         ${MLIRTransforms}
         ${MLIRTransformUtils}
-        ${MLIRTranslation})
+        ${MLIRTranslation}
+        ${MLIRVectorOps})
 
 set(MLIRLibs
         ${MLIRLibsOnce}
@@ -147,8 +148,8 @@ set(MLIRWholeArchiveLibs
         MLIRStandardToLLVM
         MLIRTransforms
         MLIRLoopToStandard
-        MLIRVectorOps
-        MLIRLoopOps)
+        MLIRLoopOps
+        MLIRVectorOps)
 
 function(whole_archive_link target lib_dir)
   get_property(link_flags TARGET ${target} PROPERTY LINK_FLAGS)

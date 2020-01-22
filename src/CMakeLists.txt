@@ -21,8 +21,7 @@ target_include_directories(compiler PRIVATE ${ONNF_BIN_ROOT})
 target_link_libraries(compiler
         ${CMAKE_THREAD_LIBS_INIT}
         ${CMAKE_DL_LIBS}
-        ${MLIRLibs}
-        curses)
+        ${MLIRLibs})
 
 set(LLVM_TARGET_DEFINITIONS pass/shape_inference_interface.td)
 onnf_tablegen(shape_inference.hpp.inc -gen-op-interface-decls)
